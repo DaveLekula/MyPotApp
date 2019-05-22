@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Pot App</string>
+    <string name="title_activity_image_upload">ImageUploadActivity</string>
+</resources>
