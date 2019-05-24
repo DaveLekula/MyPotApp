@@ -83,4 +83,6 @@ public class Report implements Serializable {
     public void setStatus(String status) {
         Status = status;
     }
+
+
 }

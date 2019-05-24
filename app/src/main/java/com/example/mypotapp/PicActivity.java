@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pojo.ListData;
 import com.example.pojo.Report;
 
 import java.io.File;
@@ -45,8 +46,8 @@ public class PicActivity extends AppCompatActivity {
 
 
 
-        btnUpload = (Button) findViewById(R.id.Uploadbtn);
-        btnReturn = (Button) findViewById(R.id.returnBtn);
+        btnUpload = (Button) findViewById(R.id.Updatebtn);
+        btnReturn = (Button) findViewById(R.id.returnBtn2);
         myImageView = findViewById(R.id.potImageView);
         tvCoordinates =(TextView) findViewById(R.id.CoorditesTV);
         Intent intent = getIntent();
@@ -71,13 +72,15 @@ public class PicActivity extends AppCompatActivity {
                 report.setDate(new Date());
                 report.setLongitude(logitude);
                 report.setLatitude(latitude);
-                report.setStatus("Sent Request to Admin");
+                report.setStatus("Report Sent");
                 report.setImage(new File(pathToFile));
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("MyPojoReport",report);
+                report.setDescription("Pothole");
+                ListData listData = new ListData();
+                listData.addReport(report);
+                //Bundle bundle = new Bundle();
+               // bundle.putSerializable("MyPojoReport",report);
                 Intent intent = new Intent(PicActivity.this,ClientHomeActivity.class);
-                intent.putExtra("ReportClass",bundle);
+                intent.putExtra("ReportClass",report);
                 Toast toast = Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);

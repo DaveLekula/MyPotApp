@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedReport">
+
+    <ImageView
+        android:id="@+id/ReportPotImageView"
+        android:layout_width="327dp"
+        android:layout_height="297dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Report Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReportPotImageView" />
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="313dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CoorditesTV">
+
+        <LinearLayout
+            android:id="@+id/DataHeadings"
+            android:layout_width="118dp"
+            android:layout_height="89dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/headLatTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude :" />
+
+            <TextView
+                android:id="@+id/headLongiTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logitude :" />
+
+            <TextView
+                android:id="@+id/headDescrTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description :" />
+
+            <TextView
+                android:id="@+id/headStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status :" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DataPrint"
+            android:layout_width="170dp"
+            android:layout_height="91dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detailLatiTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/DetailLongiTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/DetaiDescrTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/DetaiStatusTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnlinearLayout"
+        android:layout_width="255dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataLayout"
+        app:layout_constraintVertical_bias="0.065">
+
+        <Button
+            android:id="@+id/Updatebtn"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:text="Update" />
+
+        <Button
+            android:id="@+id/returnBtn2"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:text="BACK" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/CoorditesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="coordinates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</android.support.constraint.ConstraintLayout>
